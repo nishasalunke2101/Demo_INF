@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Clone or checkout the repository
-                    checkout([$class: 'GitSCM', branches: [[name: '<main>']], userRemoteConfigs: [[url: '<https://github.com/nishasalunke2101/Demo_INF.git>']]])
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/nishasalunke2101/Demo_INF.git']]])
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Perform a git pull
-                    sh 'git pull origin <main>'
+                    sh 'git pull origin main'
                 }
             }
         }
