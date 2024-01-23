@@ -2,7 +2,7 @@
 
 # Replace these variables with your actual information
 REPO_URL="https://github.com/nishasalunke2101/Demo_INF.git"
-BRANCH="main"
+BRANCH="master"
 COMMIT_MESSAGE="first commit message"
 
 # Specify the path to your local repository
