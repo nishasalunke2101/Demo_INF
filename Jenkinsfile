@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     // Commit the changes
-                    sh 'git commit -m "<1.2>"'
+                    sh 'git commit -m "1.3"'
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     // Push the changes to the remote repository
-                    sh 'git push origin <main>'
+                    sh 'git push origin main'
                 }
             }
         }
