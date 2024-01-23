@@ -25,8 +25,9 @@ pipeline {
             steps {
                 script {
                     // Perform necessary changes
-                    // For example, you can create or modify files in your workspace
-                    sh 'echo "Hello, Jenkins!" > Jenkinsfile.txt'
+                    // For example, you can create or modify files in your workspace 
+                       whoami
+                       sh 'echo "Hello, Jenkins!" > Jenkinsfile.txt'
 
                     // Add the changes to the index
                     sh 'git add .'
