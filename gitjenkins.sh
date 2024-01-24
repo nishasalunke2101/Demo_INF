@@ -12,7 +12,7 @@ REPO_PATH="/home/inferyx/nisha"
 cd "$REPO_PATH" || exit
 
 # Initialize the Git repository and set the remote origin
-git init
+# git init
 git remote add origin "$REPO_URL"
 
 # Git commands
