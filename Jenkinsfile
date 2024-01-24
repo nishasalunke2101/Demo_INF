@@ -1,13 +1,13 @@
-#!/bin/bash
+pipeline {
+    agent any
 
-<<<<<<< HEAD
     stages {
         stage('Checkout') {
             steps {
                 script {
                     // Clone or checkout the repository
-                    //checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/nishasalunke2101/Demo_INF.git']]])
-                      checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/nishasalunke2101/Demo_INF.git', credentialsId: 'nishasalunke2101']]])
+                    //checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/nishasalunke2101/Demo_INF.git']]])
+                      checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/nishasalunke2101/Demo_INF.git', credentialsId: 'nishasalunke2101']]])
                 }
             }
         }
@@ -16,33 +16,29 @@
             steps {
                 script {
                     // Perform a git pull
-                    sh 'git pull origin master'
+                    sh 'git pull origin main'
                 }
             }
         }
-=======
-# Replace these variables with your actual information
-REPO_URL="https://github.com/nishasalunke2101/Demo_INF.git"
-BRANCH="master"
-COMMIT_MESSAGE="first commit message"
 
-# Specify the path to your local repository
-REPO_PATH="/home/inferyx/nisha"
->>>>>>> 3361cf15caa21b725ce866e988e498b26ea5e3cc
+        stage('Make Changes') {
+            steps {
+                script {
+                    // Perform necessary changes
+                    // For example, you can create or modify files in your workspace 
+                       sh 'echo "Hello, Jenkins!" > Jenkinsfile'
 
-# Navigate to the local repository directory
-cd "$REPO_PATH" || exit
+                    // Add the changes to the index
+                    sh 'git add .'
+                }
+            }
+        }
 
-# Initialize the Git repository and set the remote origin
-git init
-git remote add origin "$REPO_URL"
-
-<<<<<<< HEAD
         stage('Git Commit') {
             steps {
                 script {
                     // Commit the changes
-                    sh 'git commit -m "1.5"'
+                    sh 'git commit -m "2.3"'
                 }
             }
         }
@@ -51,17 +47,9 @@ git remote add origin "$REPO_URL"
             steps {
                 script {
                     // Push the changes to the remote repository
-                    sh 'git push origin master'
+                    sh 'git push origin main'
                 }
             }
         }
     }
 }
-=======
-# Git commands
-git pull origin "$BRANCH"
-echo "Hello, Git!" > file11.txt
-git add .
-git commit -m "$COMMIT_MESSAGE"
-git push origin "$BRANCH"
->>>>>>> 3361cf15caa21b725ce866e988e498b26ea5e3cc
