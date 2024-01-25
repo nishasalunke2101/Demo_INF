@@ -81,7 +81,7 @@ cd "$REPO_PATH" || exit
 
 # Git commands
 git pull origin "$BRANCH"
-echo "Hello, This is Jenkins Git! Pipeline101" > File_abc.txt
+echo "Hello, This is Jenkins Git! Pipeline101" > File.txt
 git add .
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$BRANCH"
