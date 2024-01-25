@@ -17,7 +17,7 @@ git remote add origin "$REPO_URL"
 
 # Git commands
 git pull origin "$BRANCH"
-echo "Hello, This is Jenkins Git! Pipeline" > FILE6.txt
+echo "Hello, This is Jenkins Git! Pipeline" > file7.txt
 git add .
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$BRANCH"
