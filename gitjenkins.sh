@@ -26,7 +26,7 @@ fi
 
 # Git commands
 git pull origin "$BRANCH"
-echo "Hello, This is Jenkins Git! Pipeline101" > Ishu11.txt
+echo "Hello, This is Jenkins Git! Pipeline101" > Ishu111.txt
 git add .
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$BRANCH"
