@@ -17,7 +17,7 @@ git remote add origin "$REPO_URL"
 
 # Git commands
 git pull origin "$BRANCH"
-echo "Hello, Git!" > CBA.txt
+echo "Hello, Git!" > Pipeline_git.txt
 git add .
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$BRANCH"
