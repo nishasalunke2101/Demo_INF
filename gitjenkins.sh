@@ -6,7 +6,11 @@ BRANCH="main"
 COMMIT_MESSAGE="first commit message"
 
 # Specify the path to your local repository
+<<<<<<< HEAD
 REPO_PATH="/home/inferyx/git/Demo_INF"
+=======
+REPO_PATH="/home/inferyx/nisha"
+>>>>>>> 5f39bb35e6dcbd919f680b53685751c9df8dd43c
 
 # Navigate to the local repository directory
 cd "$REPO_PATH" || exit
@@ -17,13 +21,18 @@ git remote add origin "$REPO_URL"
 
 # Git commands
 git pull origin "$BRANCH"
+<<<<<<< HEAD
 echo "Hello, Git!" > FILE1.txt
+=======
+echo "Hello, Git!" > Pipeline_git.txt
+>>>>>>> 5f39bb35e6dcbd919f680b53685751c9df8dd43c
 git add .
 git commit -m "$COMMIT_MESSAGE"
 git push origin "$BRANCH"
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -74,3 +83,5 @@ git push origin "$BRANCH"
 # git add .
 # git commit -m "$COMMIT_MESSAGE"
 # git push origin "$BRANCH"
+=======
+>>>>>>> 5f39bb35e6dcbd919f680b53685751c9df8dd43c
